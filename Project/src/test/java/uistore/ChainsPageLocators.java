@@ -1,9 +1,9 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
-public class CoinPageLocators {
-    public static By coins = By.xpath("(//a[text()='Chain'])");
+ 
+public class ChainsPageLocators {
+    public static By chains = By.xpath("(//a[text()='Chain'])");
     public static By silver = By.xpath("(//a[text()='Silver'])[4]");
     public static By categories=By.xpath("(//div[text()='categories'])[1]");
     public static By gender = By.xpath("(//div[text()='Gender'])");
