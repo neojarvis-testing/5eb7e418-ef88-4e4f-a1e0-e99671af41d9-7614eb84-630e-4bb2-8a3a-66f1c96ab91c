@@ -23,8 +23,6 @@
       <artifactId>cucumber-java</artifactId>
       <version>7.22.1</version>
     </dependency>
-
-
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
@@ -99,7 +97,6 @@
     <artifactId>activation</artifactId>
     <version>1.1.1</version>
 </dependency>
-
   </dependencies>
  
   <build>
