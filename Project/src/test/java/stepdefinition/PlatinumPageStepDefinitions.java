@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.PlatinumPageActions;
 public class PlatinumPageStepDefinitions {
-    ExtentTest test=Hooks.reports.createTest("Testcase 5");
+    ExtentTest test=Hooks.reports.createTest("Testcase 6");
     PlatinumPageActions actions;
     @Given("user3 is on the homepage")
     public void user3_is_on_the_homepage() {
