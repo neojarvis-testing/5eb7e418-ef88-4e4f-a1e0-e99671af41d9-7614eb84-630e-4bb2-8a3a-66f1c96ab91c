@@ -4,7 +4,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import uistore.ShippingPageLocators;
-import uistore.ShippingPageLocators;
 import utils.Assertion;
 import utils.Base;
 import utils.LoggerHandler;
@@ -50,22 +49,22 @@ public class ShippingPageActions {
                     test.log(Status.FAIL, "Click on media");
                     break;
                 }
-            case "faqs":
-                try {
-                    helper.waitForTheElementToBeVisible(ShippingPageLocators.faqs, 10);
-                    helper.hoverOverElement(ShippingPageLocators.faqs);
-                    helper.clickOnElement(ShippingPageLocators.faqs); 
-                    Base.driver.navigate().back();
-                      LoggerHandler.info("Click on faqs");
-                    test.info("Click on faqs");
-                    test.log(Status.PASS, "Click on faqs");
-                    break;
-                } catch (Exception e) {
-                    LoggerHandler.error("Click on faqs");
-                    test.info("Click on faqs");
-                    test.log(Status.FAIL, "Click on faqs");
-                    break;
-                }
+            // case "faqs":
+            //     try {
+            //         helper.waitForTheElementToBeVisible(ShippingPageLocators.faqs, 10);
+            //         helper.hoverOverElement(ShippingPageLocators.faqs);
+            //         helper.clickOnElement(ShippingPageLocators.faqs); 
+            //         Base.driver.navigate().back();
+            //           LoggerHandler.info("Click on faqs");
+            //         test.info("Click on faqs");
+            //         test.log(Status.PASS, "Click on faqs");
+            //         break;
+            //     } catch (Exception e) {
+            //         LoggerHandler.error("Click on faqs");
+            //         test.info("Click on faqs");
+            //         test.log(Status.FAIL, "Click on faqs");
+            //         break;
+            //     }
             case "blogs":
                 try {
                     Thread.sleep(2000);
@@ -82,55 +81,55 @@ public class ShippingPageActions {
                     test.log(Status.FAIL, "Click on blogs");
                     break;
                 }
-                case "why reliance":
-                try {
-                    Thread.sleep(2000);
-                    helper.hoverOverElement(ShippingPageLocators.whyReliance);
-                    helper.clickOnElement(ShippingPageLocators.whyReliance); 
-                    Base.driver.navigate().back();                   
-                    LoggerHandler.info("click on why reliance");
-                    test.info("click on why reliance");
-                    test.log(Status.PASS, "click on why reliance");
-                    break;
-                } catch (Exception e) {
-                    LoggerHandler.error("click on why reliance");
-                    test.info("click on why reliance");
-                    test.log(Status.FAIL, "click on why reliance");
-                    break;
-                }
+            //     case "why reliance":
+            //     try {
+            //         Thread.sleep(2000);
+            //         helper.hoverOverElement(ShippingPageLocators.whyReliance);
+            //         helper.clickOnElement(ShippingPageLocators.whyReliance); 
+            //         Base.driver.navigate().back();                   
+            //         LoggerHandler.info("click on why reliance");
+            //         test.info("click on why reliance");
+            //         test.log(Status.PASS, "click on why reliance");
+            //         break;
+            //     } catch (Exception e) {
+            //         LoggerHandler.error("click on why reliance");
+            //         test.info("click on why reliance");
+            //         test.log(Status.FAIL, "click on why reliance");
+            //         break;
+            //     }
 
-                case "about us":
-                try {
-                    helper.hoverOverElement(ShippingPageLocators.aboutUs);
-                    Thread.sleep(2000);
-                    helper.clickOnElement(ShippingPageLocators.aboutUs);
-                    Base.driver.navigate().back();
-                    LoggerHandler.info("clicked on about us");
-                    test.info("clicked on about us");
-                    test.log(Status.PASS, "clicked on about us");
-                    break;
-                } catch (Exception e) {
-                    LoggerHandler.error("Failed clicked on about us");
-                    test.info("Failed clicked on about us");
-                    test.log(Status.FAIL, "Failed clicked on about us");
-                    break;
-                }
-            case "track your order":
-                try {
-                    Thread.sleep(2000);
-                    helper.hoverOverElement(ShippingPageLocators.trackAnOrder);
-                    helper.clickOnElement(ShippingPageLocators.trackAnOrder);
-                    Base.driver.navigate().back();
-                    LoggerHandler.info("Click on trackAnOrder");
-                    test.info("Click on trackAnOrder");
-                    test.log(Status.PASS, "Click on trackAnOrder");
-                    break;
-                } catch (Exception e) {
-                    LoggerHandler.error("Click on trackAnOrder");
-                    test.info("Click on trackAnOrder");
-                    test.log(Status.FAIL, "Click on trackAnOrder");
-                    break;
-                }
+            //     case "about us":
+            //     try {
+            //         helper.hoverOverElement(ShippingPageLocators.aboutUs);
+            //         Thread.sleep(2000);
+            //         helper.clickOnElement(ShippingPageLocators.aboutUs);
+            //         Base.driver.navigate().back();
+            //         LoggerHandler.info("clicked on about us");
+            //         test.info("clicked on about us");
+            //         test.log(Status.PASS, "clicked on about us");
+            //         break;
+            //     } catch (Exception e) {
+            //         LoggerHandler.error("Failed clicked on about us");
+            //         test.info("Failed clicked on about us");
+            //         test.log(Status.FAIL, "Failed clicked on about us");
+            //         break;
+            //     }
+            // case "track your order":
+            //     try {
+            //         Thread.sleep(2000);
+            //         helper.hoverOverElement(ShippingPageLocators.trackAnOrder);
+            //         helper.clickOnElement(ShippingPageLocators.trackAnOrder);
+            //         Base.driver.navigate().back();
+            //         LoggerHandler.info("Click on trackAnOrder");
+            //         test.info("Click on trackAnOrder");
+            //         test.log(Status.PASS, "Click on trackAnOrder");
+            //         break;
+            //     } catch (Exception e) {
+            //         LoggerHandler.error("Click on trackAnOrder");
+            //         test.info("Click on trackAnOrder");
+            //         test.log(Status.FAIL, "Click on trackAnOrder");
+            //         break;
+            //     }
                 //  case "certifications":
                 // try {
                 //     Thread.sleep(2000);
