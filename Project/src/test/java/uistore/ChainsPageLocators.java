@@ -1,6 +1,7 @@
 package uistore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By;
 public class ChainsPageLocators {
     public static By chains = By.xpath("(//a[text()='Chain'])");
     public static By silver = By.xpath("(//a[text()='Silver'])[4]");

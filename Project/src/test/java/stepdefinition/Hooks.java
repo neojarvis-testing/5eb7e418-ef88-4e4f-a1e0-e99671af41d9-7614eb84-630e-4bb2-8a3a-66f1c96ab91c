@@ -7,6 +7,27 @@ import io.cucumber.java.BeforeAll;
 import utils.Base;
 import utils.Emails;
 import utils.Reporter;
+public class Hooks extends Base {
+    static ExtentReports reports;
+
+    @BeforeAll
+    public static void createReport() {
+        System.out.println("Starting Report");
+        reports = Reporter.generateTestReport("Reliance_Report");
+    }
+
+    @Before
+    public void openReliance() {
+        openBrowser();
+    }
+
+    @After
+    public void closeReliance() {
+        driver.quit();
+    }
+
+    @AfterAll
+    public static void closeReport() {
 public class Hooks extends Base{
     static ExtentReports reports;
     @BeforeAll
@@ -29,4 +50,4 @@ public class Hooks extends Base{
         Emails.sendEmail();
     }
 }
-
+}
