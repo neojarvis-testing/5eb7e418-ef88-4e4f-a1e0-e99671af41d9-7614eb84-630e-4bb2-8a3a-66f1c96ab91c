@@ -24,6 +24,7 @@ public class Hooks extends Base{
     }
     @AfterAll
     public static void closeReport(){
+        System.out.println("Flushing report");
         reports.flush();
         Emails.sendEmail();
     }
