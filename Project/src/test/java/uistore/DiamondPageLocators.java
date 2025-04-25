@@ -14,5 +14,7 @@ public class DiamondPageLocators {
     public By firstProduct = By.xpath("(//img[@title='Buy 14 Karat Gold & Diamond Earrings'])[1]");
     public By earringsKeyword = By.id("productTitleInPDP");
     public By addToCart = By.cssSelector("div[class='btnaddtocart']");
-    public By otherKeyword = By.xpath("(//a[@data-hover='dropdown'])[11]");   
+    public By otherKeyword = By.xpath("(//a[@data-hover='dropdown'])[11]"); 
+    public By womentResultText = By.xpath("//a[@title='Gender']/parent::span"); 
+    public By newArrivalsResultText = By.xpath("//button[@id='shortbyfilter']"); 
 }
