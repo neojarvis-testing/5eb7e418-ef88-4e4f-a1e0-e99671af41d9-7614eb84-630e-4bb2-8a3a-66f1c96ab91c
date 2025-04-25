@@ -1,4 +1,3 @@
-
 package utils;
  
 import java.net.URL;
@@ -28,6 +27,7 @@ public class Base {
         WebDriverListener listener = new EventHandler();
         driver = new EventFiringDecorator<>(listener).decorate(driver);
     }
+
 package utils;
  
 import java.net.URL;

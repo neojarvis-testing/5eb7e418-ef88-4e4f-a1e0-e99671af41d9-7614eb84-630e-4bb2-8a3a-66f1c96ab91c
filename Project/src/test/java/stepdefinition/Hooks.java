@@ -28,4 +28,5 @@ public class Hooks extends Base{
         reports.flush();
         Emails.sendEmail();
     }
+}
 
