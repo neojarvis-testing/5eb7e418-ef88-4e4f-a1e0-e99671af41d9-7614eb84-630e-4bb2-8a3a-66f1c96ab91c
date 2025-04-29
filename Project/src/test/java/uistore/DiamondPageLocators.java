@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class DiamondPageLocators {
     public By relianceJewelsLogo = By.cssSelector("img[title='Online Shopping in India']");
     public By earrringsText = By.xpath("//a[text()='Earrings']");
@@ -14,7 +14,10 @@ public class DiamondPageLocators {
     public By firstProduct = By.xpath("(//img[@title='Buy 14 Karat Gold & Diamond Earrings'])[1]");
     public By earringsKeyword = By.id("productTitleInPDP");
     public By addToCart = By.cssSelector("div[class='btnaddtocart']");
-    public By otherKeyword = By.xpath("(//a[@data-hover='dropdown'])[11]"); 
-    public By womentResultText = By.xpath("//a[@title='Gender']/parent::span"); 
-    public By newArrivalsResultText = By.xpath("//button[@id='shortbyfilter']"); 
+    public By otherKeyword = By.xpath("(//a[@data-hover='dropdown'])[11]");
+    public By womentResultText = By.xpath("//span[contains(text(),'Women')]");
+    public By newArrivalsResultText = By.xpath("//button[@id='shortbyfilter']");
+    public By metals = By.xpath("//h3[contains(text(),'Metal')]");
 }
+ 
+ 
