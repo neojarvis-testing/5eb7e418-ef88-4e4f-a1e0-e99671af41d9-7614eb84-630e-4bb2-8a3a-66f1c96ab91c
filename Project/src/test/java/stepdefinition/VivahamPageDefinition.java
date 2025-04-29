@@ -6,9 +6,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import pages.VivahamPageActions;
+
 public class VivahamPageDefinition {
     ExtentTest test = Hooks.reports.createTest("Vivaham test");
-    VivahamPageActions pageActions = new VivahamPageActions(Hooks.driver, test);    
+    VivahamPageActions pageActions = new VivahamPageActions(Hooks.driver, test);
+
     @Given("user2 is on Reliance Jewels page")
     public void user2_is_on_reliance_jewels_page() {
         pageActions.verify("Reliance Jewels logo");
@@ -34,14 +36,19 @@ public class VivahamPageDefinition {
         pageActions.switchWindow(string);
     }
 
-    @When("user2 scroll {string}")
-    public void user2_scroll(String string) {
+    @When("user2 scroll to {string}")
+    public void user2_scroll_to(String string) {
         pageActions.scrollTo(string);
     }
 
     @Then("user2 verify {string}")
     public void user2_verify(String string) {
         pageActions.verify(string);
+    }
+
+    @When("user2 verify {string} is displayed")
+    public void user2_verify_is_displayed(String string) {
+        pageActions.isDisplayed(string);
     }
 
 }

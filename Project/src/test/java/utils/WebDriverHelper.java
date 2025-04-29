@@ -23,7 +23,13 @@ public class WebDriverHelper {
         this.driver = driver;
         windows.add(driver.getWindowHandle());
     }
-
+    /*
+     * Method Name: clickOnElement()
+     * Author Name: Kandula Arun Kumar
+     * Description: performs click action for web elements
+     * Parameter: locator
+     * Return Type: void
+     */
     public void clickOnElement(By locator) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -32,7 +38,13 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+    /*
+     * Method Name: sendKeys()
+     * Author Name: Kandula Arun Kumar
+     * Description: performs send data
+     * Parameter: locator,data
+     * Return Type: void
+     */
     public void sendKeys(By locator, String data) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -42,7 +54,13 @@ public class WebDriverHelper {
         }
 
     }
-
+    /*
+     * Method Name: enterAction()
+     * Author Name: Kandula Arun Kumar
+     * Description: performs enter Action
+     * Parameter: locator
+     * Return Type: void
+     */
     public void enterAction(By locator) {
         try {
             WebElement webElement = driver.findElement(locator);
@@ -51,7 +69,13 @@ public class WebDriverHelper {
             e.printStackTrace();
         }
     }
-
+    /*
+     * Method Name: waitForTheElementToBeVisible()
+     * Author Name: Kandula Arun Kumar
+     * Description: it waits for the element to be visible
+     * Parameter: locator,timeOutInSeconds
+     * Return Type: void
+     */
     public void waitForTheElementToBeVisible(By locator, int timeOutInSeconds) {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds))

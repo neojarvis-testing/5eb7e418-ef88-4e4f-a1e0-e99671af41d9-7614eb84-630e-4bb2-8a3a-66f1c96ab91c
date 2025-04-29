@@ -7,7 +7,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "features", glue = "stepdefinition", plugin = { "pretty" })
+@CucumberOptions(features = "features/RelianceFeature4.feature", glue = "stepdefinition")
 public class TestRunner {
-
 }

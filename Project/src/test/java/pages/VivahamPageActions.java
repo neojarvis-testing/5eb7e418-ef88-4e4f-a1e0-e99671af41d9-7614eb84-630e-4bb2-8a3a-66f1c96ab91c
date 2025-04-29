@@ -1,7 +1,7 @@
 package pages;
-
+ 
 import org.openqa.selenium.WebDriver;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.VivahamPageLocators;
@@ -12,7 +12,7 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 import java.time.Duration;
-
+ 
 public class VivahamPageActions {
 WebDriverHelper helper;
 VivahamPageLocators homePageLocatorsVivaham;
@@ -26,7 +26,7 @@ homePageLocatorsVivaham = new VivahamPageLocators();
 assertion = new Assertion(driver);
 this.driver = driver;
 }
-
+ 
 /*
      * Method Name: hover
      * Author Name: Tapaswini
@@ -50,7 +50,7 @@ public void hover(String element){
             Reporter.addScreenshotToReport("ClcikDiamondFailure", test, "ClcikDiamondFailure", Base.driver);
             break;
         }
-        
+       
     }
 }
 /*
@@ -271,7 +271,7 @@ public void selectDropdown(String element){
         }
         case "Guntur":
         try {
-            helper.selectDropDown(homePageLocatorsVivaham.cityDropdown, element); 
+            helper.selectDropDown(homePageLocatorsVivaham.cityDropdown, element);
             LoggerHandler.info("Selected Guntur");
             test.info("Selected Guntur");
             test.log(Status.PASS, "Selected Guntur");
@@ -309,4 +309,48 @@ public void switchWindow(String element){
         }
     }
 }
+ 
+/*
+     * Method Name: isDisplayed
+     * Author Name: Tapaswini
+     * Description: This method verifies if an element is displayed
+     * Return Type: void
+     * Parameter List: String string
+     */
+public void isDisplayed(String string){
+    switch(string){
+        case "Vivaham":
+            try{
+                assertion.verifyText(homePageLocatorsVivaham.vivaham,"Vivaham");
+                LoggerHandler.info("Vivaham link is displayed");
+                test.info("Vivaham link is displayed");
+                test.log(Status.PASS, "Vivaham link is displayed");
+                break;
+            }
+            catch(Exception e){
+                LoggerHandler.error("Vivaham link is not displayed");
+                test.fail("Vivaham link is not displayed");
+                test.log(Status.FAIL, "Vivaham link is not displayed");
+                Reporter.addScreenshotToReport("VivahamLinkDisplayFailure", test, "VivahamLinkDisplayFailure", Base.driver);
+                break;
+            }
+        case "Vivaham url":
+        try{
+            assertion.verifyUrl("VIVAHAM");
+            LoggerHandler.info("Vivaham url verified");
+            test.info("Vivaham url verified");
+            test.log(Status.PASS, "Vivaham url verified");
+            break;
+        }
+        catch(Exception e){
+            LoggerHandler.error("Vivaham url not verified");
+            test.fail("Vivaham url not verified");
+            test.log(Status.FAIL, "Vivaham url not verified");
+            Reporter.addScreenshotToReport("VivahamUrlNotVerified", test, "VivahamUrlNotVerified", Base.driver);
+            break;
+        }
+ 
+    }
 }
+}
+ 

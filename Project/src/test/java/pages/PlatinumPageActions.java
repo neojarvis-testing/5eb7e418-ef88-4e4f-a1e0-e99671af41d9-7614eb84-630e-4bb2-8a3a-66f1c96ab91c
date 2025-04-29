@@ -1,5 +1,5 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import uistore.PlatinumPageLocators;
@@ -9,18 +9,18 @@ import utils.LoggerHandler;
 import utils.Screenshot;
 import utils.Reporter;
 import utils.WebDriverHelper;
-
+ 
 public class PlatinumPageActions {
     WebDriverHelper helper;
     Assertion asserts;
     ExtentTest test;
-
+ 
     public PlatinumPageActions(ExtentTest test) {
         helper = new WebDriverHelper(Base.driver);
         asserts = new Assertion(Base.driver);
         this.test = test;
     }
-
+ 
     /*
      * Method Name: clickOnParameter
      * Author Name: vinay
@@ -80,7 +80,7 @@ public class PlatinumPageActions {
                     LoggerHandler.info("click on Morefilters");
                     test.info("click on Morefilters");
                     test.log(Status.PASS, "click on Morefilters");
-
+ 
                 } catch (Exception e) {
                     LoggerHandler.error("click on Morefilters");
                     test.fail("click on Morefilters");
@@ -142,9 +142,10 @@ public class PlatinumPageActions {
                     test.log(Status.FAIL, "clicked on buynow");
                     Reporter.addScreenshotToReport("Buy Now",test,"Buy Now",Base.driver);
                 }
+                break;
         }
     }
-
+ 
     /*
      * Method Name: hoverOverElement
      * Author Name: vinay
@@ -153,7 +154,7 @@ public class PlatinumPageActions {
      * Return Type: void
      * Parameter List: String elementname
      */
-
+ 
     public void hoverOverElement(String elementname) {
         switch (elementname) {
             case "Rings":
@@ -169,9 +170,10 @@ public class PlatinumPageActions {
                     test.log(Status.FAIL, "hover on Rings");
                     Reporter.addScreenshotToReport("Rings",test,"Rings",Base.driver);
                 }
+                break;
         }
     }
-
+ 
        /*
      * Method Name: clickOnParameter
      * Author Name: vinay
@@ -180,7 +182,7 @@ public class PlatinumPageActions {
      * Return Type: void
      * Parameter List: String elementname
      */
-
+ 
     public void verifyMethod(String elementname){
         switch(elementname){
             case "logo":
@@ -210,6 +212,47 @@ public class PlatinumPageActions {
                 Reporter.addScreenshotToReport("url verified",test,"url verified",Base.driver);
             }
             break;
+            case "Filters":
+            try {
+                asserts.verifyText(PlatinumPageLocators.moreFiltersText, "More filters");
+                LoggerHandler.info("Verified Filters");
+                test.pass("Verified Filters");
+                test.log(Status.PASS, "Verified Filters");
+            } catch (Exception e) {
+                LoggerHandler.error("Verification failed for 'Filters'");
+                test.fail("Verification failed for 'Filters'");
+                test.log(Status.FAIL, "Verification failed for 'Filters'");
+                Reporter.addScreenshotToReport("verifyFilters", test, "verifyFilters", Base.driver);
+            }
+            break;
+   
+        case "Availabletext":
+            try {
+                asserts.verifyText(PlatinumPageLocators.availableText, "Try On Available");
+                LoggerHandler.info("Verifed Available Text");
+                test.pass("Verifed Available Text");
+                test.log(Status.PASS, "Verifed Available Text");
+            } catch (Exception e) {
+                LoggerHandler.error("Verification failed for 'Availabletext'");
+                test.fail("Verification failed for 'Availabletext'");
+                test.log(Status.FAIL, "Verification failed for 'Availabletext'");
+                Reporter.addScreenshotToReport("verifyAvailabletext", test, "verifyAvailabletext", Base.driver);
+            }
+            break;
+   
+        case "Yestext":
+            try {
+                asserts.verifyText(PlatinumPageLocators.yesText, "Yes");
+                LoggerHandler.info("Verified Yes text");
+                test.info("Verified Yes text");
+                test.log(Status.PASS, "Verified Yes text");
+            } catch (Exception e) {
+                LoggerHandler.error("Verification failed for 'Yestext'");
+                test.fail("Verification failed for 'Yestext'");
+                test.log(Status.FAIL, "Verification failed for 'Yestext'");
+                Reporter.addScreenshotToReport("verifyYestext", test, "verifyYestext", Base.driver);
+            }
+            break;
             case "product":
             try {
                 asserts.verifyText(PlatinumPageLocators.productcode, "Product Code");
@@ -223,10 +266,11 @@ public class PlatinumPageActions {
                 test.log(Status.FAIL, "Verified products");
                 Reporter.addScreenshotToReport("verifyProducts",test,"verifyProducts",Base.driver);
             }
-        
+            break;
+       
         }
     }
-
+ 
     /*
      * Method Name: takeScreenshot()
      * Author Name: vinay
@@ -245,8 +289,8 @@ public class PlatinumPageActions {
             test.fail("Platinumscreenshot");
             test.log(Status.FAIL, "Platinumscreenshot");
             Reporter.addScreenshotToReport("Platinumscreenshot",test,"Platinumscreenshot",Base.driver);
-
+ 
         }
-
+ 
     }
 }

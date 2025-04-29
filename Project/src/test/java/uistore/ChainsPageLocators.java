@@ -1,7 +1,5 @@
 package uistore;
 import org.openqa.selenium.By;
-import org.openqa.selenium.By;
-import org.openqa.selenium.By;
 public class ChainsPageLocators {
     public static By chains = By.xpath("(//a[text()='Chain'])");
     public static By silver = By.xpath("(//a[text()='Silver'])[4]");
@@ -15,4 +13,9 @@ public class ChainsPageLocators {
     public static By buyNow = By.xpath("(//a[@title='Buy 925 Purity Silver Chain'])[2]");
     public static By productCode = By.xpath("(//span[@id='productCodeInPDP'])");
     public static By logo = By.xpath("//img[@title='Online Shopping in India']");
+    public static By logoCheck = By.xpath("//img[@src='//image.reliancejewels.com/Jewels/cms_hydrant/widgets/HS18Logo/HorizontalBannerImage_1593441799728.png']");
+    public static By womenText=By.xpath("(//span[text()='Women'])");
+    public static By yesText=By.xpath("(//span[text()='Yes'])");
+ 
 }
+ 

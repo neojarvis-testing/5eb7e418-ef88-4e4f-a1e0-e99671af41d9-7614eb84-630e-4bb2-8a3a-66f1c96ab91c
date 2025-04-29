@@ -1,7 +1,7 @@
 package uistore;
-
+ 
 import org.openqa.selenium.By;
-
+ 
 public class PolicyPageLocators {
     public static By returnAndrefund = By.xpath("//a[text()='Return & Refund Policy']");
     public static By shippingPolicy = By.xpath("(//a[text()='Shipping Policy'])[1]");
@@ -13,3 +13,5 @@ public class PolicyPageLocators {
     public static By disclaimer = By.xpath("(//a[text()='Disclaimer'])[1]");
     public static By callBack = By.xpath("//a[text()='Call Back']");
 }
+ 
+ 

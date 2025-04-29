@@ -68,6 +68,44 @@ public class DropPageActions {
                     test.fail("Key Features");
                     test.log(Status.FAIL, "Key Features");
                 }
+                break;
+            case "MoreFiltersText":
+                try {
+                    asserts.verifyText(DropsPageLocators.moreFiltersText, "More filters");
+                    LoggerHandler.info("Filters text verified");
+                    test.info("Filters text verified");
+                    test.log(Status.PASS, "Filters text verified");
+                } catch (Exception e) {
+                    LoggerHandler.error("Filters text verified");
+                    test.fail("Filters text verified");
+                    test.log(Status.FAIL, "Filters text verified");
+                }
+                break;
+
+            case "MetalpurityText":
+                try {
+                    asserts.verifyText(DropsPageLocators.metalPuritytext, "Metal Purity");
+                    LoggerHandler.info("Purity text verified");
+                    test.info("Purity text verified");
+                    test.log(Status.PASS, "Purity text verified");
+                } catch (Exception e) {
+                    LoggerHandler.error("Purity text verified");
+                    test.fail("Purity text verified");
+                    test.log(Status.FAIL, "Purity text verified");
+                }
+                break;
+
+            case "22ktText":
+                try {
+                    asserts.verifyText(DropsPageLocators.purityText, "22");
+                    LoggerHandler.info("22 kt");
+                    test.info("22 kt");
+                    test.log(Status.PASS, "22 kt");
+                } catch (Exception e) {
+                    LoggerHandler.error("22 kt");
+                    test.fail("22 kt");
+                    test.log(Status.FAIL, "22 kt");
+                }
         }
     }
 
@@ -92,7 +130,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on Drops");
                     test.fail("clicked on Drops");
                     test.log(Status.FAIL, "clicked on Drops");
-                    Reporter.addScreenshotToReport("Drops",test,"Drops",Base.driver);
+                    Reporter.addScreenshotToReport("Drops", test, "Drops", Base.driver);
                 }
                 break;
             case "Categories":
@@ -106,7 +144,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on categories");
                     test.fail("clicked on categories");
                     test.log(Status.FAIL, "clicked on categories");
-                    Reporter.addScreenshotToReport("categories",test,"categories",Base.driver);
+                    Reporter.addScreenshotToReport("categories", test, "categories", Base.driver);
                 }
                 break;
             case "Gold":
@@ -120,7 +158,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on Gold");
                     test.fail("clicked on Gold");
                     test.log(Status.FAIL, "clicked on Gold");
-                    Reporter.addScreenshotToReport("Gold",test,"Gold",Base.driver);
+                    Reporter.addScreenshotToReport("Gold", test, "Gold", Base.driver);
                 }
                 break;
             case "More Filters":
@@ -134,7 +172,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on more filters");
                     test.fail("clicked on more filters");
                     test.log(Status.FAIL, "clicked on more filters");
-                    Reporter.addScreenshotToReport("more filters",test,"more filters",Base.driver);
+                    Reporter.addScreenshotToReport("more filters", test, "more filters", Base.driver);
                 }
                 break;
             case "Metal Purity":
@@ -148,7 +186,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on Metalpurity");
                     test.fail("clicked on Metalpurity");
                     test.log(Status.FAIL, "clicked on Metalpurity");
-                    Reporter.addScreenshotToReport("Metalpurity",test,"Metalpurity",Base.driver);
+                    Reporter.addScreenshotToReport("Metalpurity", test, "Metalpurity", Base.driver);
                 }
                 break;
             case "22Kt purity":
@@ -162,7 +200,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on 22kt");
                     test.fail("clicked on 22kt");
                     test.log(Status.FAIL, "clicked on 22kt");
-                    Reporter.addScreenshotToReport("clicked on 22kt",test,"clicked on 22kt",Base.driver);
+                    Reporter.addScreenshotToReport("clicked on 22kt", test, "clicked on 22kt", Base.driver);
                 }
                 break;
 
@@ -177,7 +215,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on first product");
                     test.fail("clicked on first product");
                     test.log(Status.FAIL, "clicked on first product");
-                    Reporter.addScreenshotToReport("first product",test,"first product",Base.driver);
+                    Reporter.addScreenshotToReport("first product", test, "first product", Base.driver);
                 }
                 break;
             case "Buy Now":
@@ -191,7 +229,7 @@ public class DropPageActions {
                     LoggerHandler.error("clicked on Buynow");
                     test.fail("clicked on Buynow");
                     test.log(Status.FAIL, "clicked on Buynow");
-                    Reporter.addScreenshotToReport("clicked on Buynow",test,"clicked on Buynow",Base.driver);
+                    Reporter.addScreenshotToReport("clicked on Buynow", test, "clicked on Buynow", Base.driver);
                 }
                 break;
         }
@@ -219,7 +257,7 @@ public class DropPageActions {
                     LoggerHandler.error("Hovered on Earrings");
                     test.fail("Hovered on Earrings");
                     test.log(Status.FAIL, "Hovered on Earrings");
-                    Reporter.addScreenshotToReport("Drops",test,"Drops",Base.driver);
+                    Reporter.addScreenshotToReport("Drops", test, "Drops", Base.driver);
                 }
                 break;
 
@@ -245,7 +283,7 @@ public class DropPageActions {
             LoggerHandler.error("taken Drops screenshot");
             test.fail("taken Drops screenshot");
             test.log(Status.FAIL, "taken Drops screenshot");
-            Reporter.addScreenshotToReport("Drops screenshot",test,"Drops screenshot",Base.driver);
+            Reporter.addScreenshotToReport("Drops screenshot", test, "Drops screenshot", Base.driver);
 
         }
     }
